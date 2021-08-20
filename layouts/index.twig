@@ -2,8 +2,17 @@
 
 {% block main %}
 <main class="main  container">
-    <article class="article  article--page  content  typeset">
-        <p>Este tema foi desenvolvido com base no tema <a href="https://jekyllthemes.io/theme/alembic">Alembic para Jekyll</a>.</p>
-    </article>
+    <div class="content">
+        <article class="article  article--page  content  typeset">
+            <p>Este tema foi desenvolvido com base no tema <a
+                    href="https://github.com/meduza-ssg-php/meduza-theme-alembic/">Alembic para Meduza</a>.</p>
+        </article>
+
+        <section class="section  typeset">
+            {% block content %}
+            {{ content }}
+            {% endblock content %}
+        </section>
+    </div>
 </main>
 {% endblock main %}

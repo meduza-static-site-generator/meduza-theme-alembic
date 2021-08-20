@@ -2218,32 +2218,32 @@
 
 
 
-    <link rel="icon" type="image/png" href="{{ theme.logo }}" sizes="16x16">
-    <link rel="apple-touch-icon" sizes="16x16" href="{{ theme.logo }}">
+    <link rel="icon" type="image/png" href="{{ site.baseUrl}}{{ theme.logo }}" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="16x16" href="{{ site.baseUrl}}{{ theme.logo }}">
 
-    <link rel="icon" type="image/png" href="{{ theme.logo }}" sizes="32x32">
-    <link rel="apple-touch-icon" sizes="32x32" href="{{ theme.logo }}">
+    <link rel="icon" type="image/png" href="{{ site.baseUrl}}{{ theme.logo }}" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="32x32" href="{{ site.baseUrl}}{{ theme.logo }}">
 
-    <link rel="icon" type="image/png" href="{{ theme.logo }}" sizes="96x96">
-    <link rel="apple-touch-icon" sizes="96x96" href="{{ theme.logo }}">
+    <link rel="icon" type="image/png" href="{{ site.baseUrl}}{{ theme.logo }}" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="96x96" href="{{ site.baseUrl}}{{ theme.logo }}">
 
-    <link rel="icon" type="image/png" href="{{ theme.logo }}" sizes="120x120">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ theme.logo }}">
+    <link rel="icon" type="image/png" href="{{ site.baseUrl}}{{ theme.logo }}" sizes="120x120">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseUrl}}{{ theme.logo }}">
 
-    <link rel="icon" type="image/png" href="{{ theme.logo }}" sizes="144x144">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ theme.logo }}">
+    <link rel="icon" type="image/png" href="{{ site.baseUrl}}{{ theme.logo }}" sizes="144x144">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseUrl}}{{ theme.logo }}">
 
-    <link rel="icon" type="image/png" href="{{ theme.logo }}" sizes="180x180">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ theme.logo }}">
+    <link rel="icon" type="image/png" href="{{ site.baseUrl}}{{ theme.logo }}" sizes="180x180">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseUrl}}{{ theme.logo }}">
 
-    <link rel="icon" type="image/png" href="{{ theme.logo }}" sizes="512x512">
-    <link rel="apple-touch-icon" sizes="512x512" href="{{ theme.logo }}">
+    <link rel="icon" type="image/png" href="{{ site.baseUrl}}{{ theme.logo }}" sizes="512x512">
+    <link rel="apple-touch-icon" sizes="512x512" href="{{ site.baseUrl}}{{ theme.logo }}">
 
-    <link rel="icon" type="image/png" href="{{ theme.logo }}" sizes="1024x1024">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="{{ theme.logo }}">
+    <link rel="icon" type="image/png" href="{{ site.baseUrl}}{{ theme.logo }}" sizes="1024x1024">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="{{ site.baseUrl}}{{ theme.logo }}">
 
 
-    <link rel="shortcut icon" href="{{ theme.logo }}">
+    <link rel="shortcut icon" href="{{ site.baseUrl}}{{ theme.logo }}">
 
 
 
@@ -2383,7 +2383,7 @@
     <header class="header">
         <div class="container">
             <a class="logo" href="/">
-                <img src="{{ theme.logo }}" alt="{{ site.name }}">
+                <img src="{{ site.baseUrl}}{{ theme.logo }}" alt="{{ site.name }}">
             </a>
 
 
@@ -2395,48 +2395,9 @@
 
                     {% for menuItem in theme.mainMenu %}
                     <li class="item  item--nav">
-                        <a href="{{ menuItem.url }}">{{ menuItem.label }}</a>
+                        <a href="{{ site.baseUrl }}{{ menuItem.url }}">{{ menuItem.label }}</a>
                     </li>
                     {% endfor %}
-                    <!-- <li class="item  item--nav  item--current">
-                        <a href="/">Home</a>
-                    </li>
-
-
-
-
-                    <li class="item  item--nav">
-                        <a href="/elements/">Elements</a>
-                    </li>
-
-
-
-
-                    <li class="item  item--nav">
-                        <a href="/blog/">Blog</a>
-                    </li>
-
-
-
-
-                    <li class="item  item--nav">
-                        <a href="/categories/">Categories</a>
-                    </li>
-
-
-
-
-                    <li class="item  item--nav">
-                        <a href="/search/">Search</a>
-                    </li>
-
-
-
-
-                    <li class="item  item--nav">
-                        <a href="https://github.com/daviddarnes/alembic">Fork Alembic</a>
-                    </li> -->
-
                 </ul>
                 <button class="button  button--nav" aria-label="Menu toggle">
                     <svg width="16" height="16" class="icon  icon--nav" role="img" alt="Menu">
@@ -2485,8 +2446,12 @@
 
 
 
-
-        <div class="feature" style="background-image: url({{ page.image }})">
+        {% if page.image is defined %}
+            {% set image = page.image %}
+            {% else %}
+                {% set image = theme.image %}
+        {% endif %}
+        <div class="feature" style="background-image: url({{ site.baseUrl }}{{ image }})">
             <div class="container  typeset">
                 <h2 id="alembic">{{ page.title }}</h2>
                 <p>{{ page.description }}</p>
@@ -2516,7 +2481,7 @@
 
 
                     <li class="item  item--nav">
-                        <a href="{{ site.author.link }}">{{ site.author.name }}</a>
+                        <a href="{{ site.author.homepage }}">{{ site.author.name }}</a>
                     </li>
 
                 </ul>
