@@ -1,0 +1,44 @@
+{% extends "_base.twig" %}
+
+{% block main %}
+<main class="main  container">
+    <article class="article  article--post  content  typeset">
+        <h1>{{ page.title }}</h1>
+        <small class="small  post-meta">
+            <!-- <span class="label  label--category"><a href="/categories/#general">General</a></span> -->
+            <!-- &nbsp;·&nbsp;<time datetime="2016-08-29T00:00:00+01:00" class="time">29 Aug 2016</time> -->
+            &nbsp;·&nbsp;<time datetime="{{ post.datetime }}" class="time">{{ post.datetime }}</time>
+        </small>
+        {% block content %}
+
+        {% endblock content %}
+
+        <!-- <div class="share">
+            <a class="button"
+                href="https://twitter.com/intent/tweet/?url=https://alembic.darn.es/general/2016/08/29/example-post-three/&amp;text=Description%20of%20a%20Pot%20Still&amp;via=DavidDarnes"
+                style="background: #0d94e7">Twitter&nbsp; <svg width="16" height="16" class="icon  icon--twitter"
+                    role="img" alt="twitter">
+                    <title>twitter</title>
+                    <use xlink:href="#twitter" fill="CurrentColor"></use>
+                </svg>
+            </a>
+            <a class="button"
+                href="https://facebook.com/sharer/sharer.php?u=https://alembic.darn.es/general/2016/08/29/example-post-three/"
+                style="background: #3B5998">facebook&nbsp; <svg width="16" height="16" class="icon  icon--facebook"
+                    role="img" alt="facebook">
+                    <title>facebook</title>
+                    <use xlink:href="#facebook" fill="CurrentColor"></use>
+                </svg>
+            </a>
+            <a class="button"
+                href="mailto:?subject=Description of a Pot Still&amp;body=Hey, check out this: https://alembic.darn.es/general/2016/08/29/example-post-three/"
+                style="background: true">Email&nbsp; <svg width="16" height="16" class="icon  icon--email" role="img"
+                    alt="email">
+                    <title>email</title>
+                    <use xlink:href="#email" fill="CurrentColor"></use>
+                </svg>
+            </a>
+        </div> -->
+    </article>
+</main>
+{% endblock main %}
