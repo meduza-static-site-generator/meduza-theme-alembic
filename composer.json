@@ -1,0 +1,18 @@
+{
+    "name": "meduza-static-site-generator/meduza-theme-alembic",
+    "description": "Tema para Meduza baseado no tema Alembic para Jekyll",
+    "type": "metapackage",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Everton da Rosa",
+            "email": "everton3x@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "meduza-static-site-generator/meduza-plugin-catloger": "dev",
+        "meduza-static-site-generator/meduza-plugin-resumizer": "dev",
+        "meduza-static-site-generator/meduza-plugin-time-reader": "dev"
+    }
+}
