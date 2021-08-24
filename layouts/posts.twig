@@ -15,9 +15,10 @@
                         <small class="small  post-meta">
                             <!-- <span class="label  label--category"><a href="/categories/#general">General</a></span> -->
                             <!-- &nbsp;·&nbsp;<time datetime="2016-08-29T00:00:00+01:00" class="time">29 Aug 2016</time> -->
+                            <span class="label label--category">Tempo de leitura: {{ post.frontmatter.timeRead }} min.</span>
                             &nbsp;·&nbsp;<time datetime="{{ post.datetime }}" class="time">{{ post.datetime }}</time>
                         </small>
-                        <p>{{ post.resume }}</p>
+                        <p>{{ post.frontmatter.resume }}</p>
                     </article>
                 </li>
                 {% endfor %}
