@@ -13,6 +13,6 @@
     "require": {
         "meduza-static-site-generator/meduza-plugin-catloger": "@dev",
         "meduza-static-site-generator/meduza-plugin-resumizer": "@dev",
-        "meduza-static-site-generator/meduza-plugin-time-reader": "@dev"
+        "meduza-static-site-generator/meduza-plugin-time-read": "@dev"
     }
 }
