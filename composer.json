@@ -1,7 +1,7 @@
 {
     "name": "meduza-static-site-generator/meduza-theme-alembic",
     "description": "Tema para Meduza baseado no tema Alembic para Jekyll",
-    "type": "metapackage",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
