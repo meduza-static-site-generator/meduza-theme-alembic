@@ -1,14 +1,29 @@
 {
     "name": "meduza-static-site-generator/meduza-theme-alembic",
-    "description": "Tema para Meduza baseado no tema Alembic para Jekyll",
-    "type": "library",
-    "license": "MIT",
+    "description": "Tema para Meduza baseado no tema Alembic de David Darnes",
+    "keywords": [
+        "php8",
+        "php",
+        "static site generator",
+        "static site",
+        "theme"
+    ],
+    "homepage": "https://github.com/meduza-static-site-generator/meduza-theme-alembic/",
+    "readme": "README.md",
     "authors": [
         {
             "name": "Everton da Rosa",
-            "email": "everton3x@gmail.com"
+            "email": "everton3x@gmail.com",
+            "homepage": "https://everton3x.github.io",
+            "role": "developer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/meduza-static-site-generator/meduza-plugin-theme-alembic/issues",
+        "source": "https://github.com/meduza-static-site-generator/meduza-plugin-theme-alembic/"
+    },
+    "type": "library",
+    "license": "MIT",
     "minimum-stability": "dev",
     "require": {
         "meduza-static-site-generator/meduza-plugin-catloger": "@dev",
